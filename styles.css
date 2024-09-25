@@ -198,3 +198,110 @@ footer {
     margin-bottom: 10px;
     border-radius: 5px;
 }
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .section {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .collapsible {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+        font-size: 14px;
+    }
+}
+
+/* Tablet (min-width: 481px and max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    nav ul li a {
+        padding: 10px 15px;
+        font-size: 1.1em;
+    }
+
+    .section {
+        padding: 30px;
+        margin: 20px;
+        max-width: 90%;
+    }
+
+    .collapsible {
+        font-size: 15px;
+        padding: 16px;
+    }
+
+    .slideshow-container img {
+        width: 100%;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+/* Desktop (min-width: 769px) */
+@media (min-width: 769px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+
+    .section {
+        padding: 40px;
+        margin: 30px auto;
+        max-width: 1000px;
+    }
+
+    .collapsible {
+        font-size: 16px;
+        padding: 18px;
+    }
+
+    .slideshow-container img {
+        width: 100%;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
