@@ -1,28 +1,17 @@
-/* General Styles */
+/* Google Font */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #004d00;
-}
-
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Header Styles */
+/* Header */
 header {
-    background-color: #004d00;
-    padding: 10px;
+    background: linear-gradient(to right, #122142, #426c7a);
+    padding: 20px;
     text-align: center;
     color: white;
 }
@@ -38,86 +27,136 @@ header {
     margin-right: 15px;
 }
 
-/* Navigation Styles */
+h1 {
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+/* Navigation */
 nav {
-    background-color: #008000;
+    background-color: #122142;
     text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 600;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #426c7a;
+    border-radius: 5px;
 }
 
 /* Section Styles */
 .section {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px;
+    max-width: 1000px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+h2 {
+    text-align: center;
+    color: #426c7a;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* About Us Image */
 .college-photo {
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Gallery */
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
     width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Gallery Styles */
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.fade {
+    animation: fade 2s ease-in-out;
 }
 
-.gallery img {
-    width: 200px;
-    border-radius: 8px;
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
 }
 
-/* Contact Us Form Styles */
-form {
+/* Contact Form */
+.contact-section form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
 form label {
-    margin: 10px 0 5px;
+    margin-top: 10px;
+    font-weight: 600;
 }
 
-form input {
+form input[type="text"],
+form input[type="email"] {
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
     border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
 form input[type="submit"] {
-    background-color: #008000;
+    background-color: #426c7a;
     color: white;
-    cursor: pointer;
     border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 form input[type="submit"]:hover {
-    background-color: #004d00;
+    background-color: #122142;
+}
+/* About Us Hyperlinks */
+#about-us a {
+    color: #122142; /* Link color to match your design */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links for emphasis */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+#about-us a:hover {
+    color: #122142; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
 }
 /* Research Projects Section */
 .research-list {
@@ -127,17 +166,60 @@ form input[type="submit"]:hover {
     line-height: 1.8; /* Add space between list items */
     color: #333; /* Text color */
 }
+
 .research-list li {
     margin-bottom: 10px; /* Space between each item */
 }
 
-/* Footer Styles */
+
+/* Footer */
 footer {
-    background-color: #004d00;
+    background-color: #122142;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Collapsible for Research Section */
+.collapsible {
+    background-color: #122142;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.collapsible:hover {
+    background-color: #426c7a;
+}
+
+.collapsible.active,
+.collapsible:after {
+    content: "\2212";
+    font-weight: bold;
+    float: right;
+}
+
+.collapsible:after {
+    content: "\002B";
+    font-weight: bold;
+    float: right;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f4f7f6;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
